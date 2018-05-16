@@ -2,14 +2,13 @@ package main.app;
 
 import main.lib.*;
 
-import java.util.Calendar;
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
         //prepare services
         Registrar registrar = new RegistrarImpl();
-        RoomScheduler roomScheduler = new RoomSchedulerImpl(registrar);
+        RoomScheduler roomScheduler = new RoomSchedulerImpl();
         Scanner scan = new Scanner(System.in);
         ConsoleProvider provider = new ConsoleProvider(registrar, roomScheduler, scan);
 

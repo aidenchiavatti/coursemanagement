@@ -12,7 +12,4 @@ public interface Registrar {
     Set<Course> allCourses();
 
     Set<Student> allStudents();
-
-    Set<Course> coursesFor(Student student);
-
 }

@@ -1,11 +1,6 @@
-package lib;
+package main.lib;
 
-import main.lib.Course;
-import main.lib.Room;
-import main.lib.Student;
 import org.junit.Test;
-
-import java.util.Calendar;
 
 import static main.Constants.CALENDAR;
 import static org.junit.Assert.*;
@@ -20,7 +15,7 @@ public class CourseTest {
 
     @Test
     public void enroll_studentIsShownInClass() {
-        CourseMock course = new CourseMock("SWENG", CALENDAR);
+        Course course = new Course("SWENG", CALENDAR);
         Student student = new Student("Aiden");
         course.enroll(student);
         assertEquals(1, course.students().size());
@@ -37,7 +32,7 @@ public class CourseTest {
     @Test
     public void setRoom() {
         Room room = new Room("room1");
-        CourseMock course = new CourseMock("SWENG", CALENDAR);
+        Course course = new Course("SWENG", CALENDAR);
         course.setRoom(room);
         assertEquals(room, course.getRoom());
     }

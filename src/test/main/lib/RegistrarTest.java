@@ -1,6 +1,5 @@
-package lib;
+package main.lib;
 
-import main.lib.*;
 import org.junit.Test;
 
 import java.util.Set;
@@ -32,9 +31,9 @@ public class RegistrarTest {
         registrar.registerStudent(student);
         registrar.registerCourse(course);
         registrar.enroll(course, student);
-        Set<Course> courses = registrar.coursesFor(student);
+        Set<Course> courses = student.courses();
         assertEquals(1, courses.size());
-        assertTrue(registrar.coursesFor(student).contains(course));
+        assertTrue(student.courses().contains(course));
     }
 
     @Test(expected = EnrollmentException.class)

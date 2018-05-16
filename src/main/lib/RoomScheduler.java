@@ -8,6 +8,4 @@ public interface RoomScheduler {
     Set<Room> allRooms();
 
     void schedule(Course course, Room room) throws SchedulingException ;
-
-    Set<Course> coursesInRoom(Room room);
 }

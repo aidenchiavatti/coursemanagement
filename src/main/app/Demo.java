@@ -14,7 +14,7 @@ class Demo {
             Student student = new Student("Aiden");
             Registrar registrar = new RegistrarImpl();
             Room room = new Room("room1");
-            RoomScheduler roomScheduler = new RoomSchedulerImpl(registrar);
+            RoomScheduler roomScheduler = new RoomSchedulerImpl();
 
             //create new course
             registrar.registerCourse(course);
@@ -35,9 +35,9 @@ class Demo {
             //show students in course
             course.students();
             //show courses for student
-            registrar.coursesFor(student);
+            student.courses();
             //show courses in room
-            roomScheduler.coursesInRoom(room);
+            room.courses();
 
             Collection<Student> students = course.students();
             System.out.println(course.toString());

@@ -8,10 +8,7 @@ import java.util.stream.Collectors;
 public class RoomSchedulerImpl implements RoomScheduler {
     private Set<Room> rooms;
 
-    private Registrar registrar;
-
-    public RoomSchedulerImpl(Registrar registrar) {
-        this.registrar = registrar;
+    public RoomSchedulerImpl() {
         this.rooms = new HashSet<>();
     }
 
@@ -28,18 +25,13 @@ public class RoomSchedulerImpl implements RoomScheduler {
 
     @Override
     public void schedule(Course course, Room room) throws SchedulingException {
-        Set<Course> courses = coursesInRoom(room);
+        Set<Course> courses = room.courses();
         boolean isRoomOccupied = courses.stream().anyMatch(c -> c.getTime().equals(course.getTime()));
         if(isRoomOccupied) {
             throw new SchedulingException("Room has course at same time.");
         } else {
             course.setRoom(room);
+            room.addCourse(course);
         }
-    }
-
-    @Override
-    public Set<Course> coursesInRoom(Room room) {
-        return registrar.allCourses().stream().filter(c -> Objects.nonNull(c.getRoom()))
-                .filter(c -> c.getRoom().equals(room)).collect(Collectors.toSet());
     }
 }

@@ -29,22 +29,18 @@ public class RegistrarImpl implements Registrar {
     }
 
     @Override
-    public Set<Course> coursesFor(Student student) {
-        return courses.stream().filter(c -> c.students().contains(student)).collect(Collectors.toSet());
-    }
-
-    @Override
     public void enroll(Course course, Student student) throws EnrollmentException {
         if(!courses.contains(course)) {
             throw new EnrollmentException("Course has not been registered.");
         } else if(!students.contains(student)) {
             throw new EnrollmentException("Student has not been registered.");
         }
-        for(Course c : coursesFor(student)) {
+        for(Course c : student.courses()) {
             if(c.getTime().getTime().getTime() == course.getTime().getTime().getTime()) {
                 throw new EnrollmentException("Student already has class at this time.");
             }
         }
         course.enroll(student);
+        student.enroll(course);
     }
 }
