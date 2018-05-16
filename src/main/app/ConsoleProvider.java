@@ -1,9 +1,13 @@
 package main.app;
 
-import main.lib.*;
+import main.lib.entity.Course;
+import main.lib.entity.Room;
+import main.lib.entity.Student;
+import main.lib.exception.EnrollmentException;
+import main.lib.service.Registrar;
+import main.lib.service.RoomScheduler;
 
 import java.util.*;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class ConsoleProvider {

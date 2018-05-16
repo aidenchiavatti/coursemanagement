@@ -1,5 +1,7 @@
-package main.lib;
+package main.lib.entity;
 
+import main.lib.entity.Course;
+import main.lib.entity.Room;
 import org.junit.Test;
 
 import static main.Constants.CALENDAR;

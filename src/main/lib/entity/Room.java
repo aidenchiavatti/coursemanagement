@@ -1,4 +1,4 @@
-package main.lib;
+package main.lib.entity;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -16,7 +16,7 @@ public class Room {
         return this.courses;
     }
 
-    protected void addCourse(Course course) {
+    public void addCourse(Course course) {
         this.courses.add(course);
     }
 

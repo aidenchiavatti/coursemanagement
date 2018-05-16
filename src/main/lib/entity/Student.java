@@ -1,4 +1,4 @@
-package main.lib;
+package main.lib.entity;
 
 import java.util.HashSet;
 
@@ -19,7 +19,7 @@ public class Student {
         return this.courses;
     }
 
-    protected void enroll(Course course) {
+    public void enroll(Course course) {
         courses.add(course);
     }
 }

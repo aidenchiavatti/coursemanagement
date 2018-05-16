@@ -1,5 +1,10 @@
-package main.lib;
+package main.lib.service;
 
+import main.lib.entity.Course;
+import main.lib.entity.Room;
+import main.lib.exception.SchedulingException;
+import main.lib.service.RoomScheduler;
+import main.lib.service.RoomSchedulerImpl;
 import org.junit.Test;
 
 import java.util.HashSet;

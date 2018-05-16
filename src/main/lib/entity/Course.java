@@ -1,4 +1,4 @@
-package main.lib;
+package main.lib.entity;
 
 import java.util.Calendar;
 import java.util.HashSet;
@@ -19,7 +19,7 @@ public class Course {
         return students;
     }
 
-    protected void enroll(Student student) {
+    public void enroll(Student student) {
         students.add(student);
     }
 
@@ -31,7 +31,7 @@ public class Course {
         return time;
     }
 
-    protected void setRoom(Room room) {
+    public void setRoom(Room room) {
         this.room = room;
     }
 

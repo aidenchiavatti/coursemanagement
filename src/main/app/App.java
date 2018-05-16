@@ -1,6 +1,9 @@
 package main.app;
 
-import main.lib.*;
+import main.lib.service.Registrar;
+import main.lib.service.RegistrarImpl;
+import main.lib.service.RoomScheduler;
+import main.lib.service.RoomSchedulerImpl;
 
 import java.util.Scanner;
 

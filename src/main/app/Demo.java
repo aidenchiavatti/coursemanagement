@@ -1,7 +1,14 @@
 package main.app;
 
-import main.lib.*;
-import sun.util.resources.cldr.aa.CalendarData_aa_DJ;
+import main.lib.entity.Course;
+import main.lib.entity.Room;
+import main.lib.entity.Student;
+import main.lib.exception.EnrollmentException;
+import main.lib.exception.SchedulingException;
+import main.lib.service.Registrar;
+import main.lib.service.RegistrarImpl;
+import main.lib.service.RoomScheduler;
+import main.lib.service.RoomSchedulerImpl;
 
 import java.util.Calendar;
 import java.util.Collection;

@@ -1,9 +1,11 @@
-package main.lib;
+package main.lib.service;
+
+import main.lib.entity.Course;
+import main.lib.entity.Room;
+import main.lib.exception.SchedulingException;
 
 import java.util.HashSet;
-import java.util.Objects;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 public class RoomSchedulerImpl implements RoomScheduler {
     private Set<Room> rooms;

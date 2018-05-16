@@ -1,5 +1,10 @@
-package main.lib;
+package main.lib.service;
 
+import main.lib.entity.Course;
+import main.lib.entity.Student;
+import main.lib.exception.EnrollmentException;
+import main.lib.service.Registrar;
+import main.lib.service.RegistrarImpl;
 import org.junit.Test;
 
 import java.util.Set;

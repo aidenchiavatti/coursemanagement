@@ -1,8 +1,10 @@
-package main.lib;
+package main.lib.service;
+
+import main.lib.entity.Course;
+import main.lib.entity.Student;
+import main.lib.exception.EnrollmentException;
 
 import java.util.HashSet;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 public class RegistrarImpl implements Registrar {
     private HashSet<Course> courses = new HashSet<>();

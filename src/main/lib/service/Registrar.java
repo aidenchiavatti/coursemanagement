@@ -1,4 +1,8 @@
-package main.lib;
+package main.lib.service;
+
+import main.lib.entity.Course;
+import main.lib.entity.Student;
+import main.lib.exception.EnrollmentException;
 
 import java.util.Set;
 
